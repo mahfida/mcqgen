@@ -1,0 +1,6 @@
+Question_No,Question,Option_A,Option_B,Option_C,Option_D,Correct_Answer
+1,What field of study is machine learning concerned with?,Artificial intelligence,Robotics,Cybersecurity,Quantum computing,a
+2,Who coined the term 'machine learning' in 1959?,Arthur Samuel,Donald Hebb,Tom M. Mitchell,Ian Goodfellow,b
+3,Which book introduced a theoretical neural structure by Donald Hebb?,The Organization of Behavior,Learning Machines,Computing Machinery and Intelligence,The Development of Artificial Intelligence,c
+4,What is the focus of current Reinforcement Learning Algorithms?,Decisions with respect to previous time,Clustering,Classification,Dimensionality reduction,d
+5,Which group introduced generative adversarial networks (GANs) in 2014?,Ian Goodfellow and others,Arthur Samuel,Tom M. Mitchell,Donald Hebb,a
