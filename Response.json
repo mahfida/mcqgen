@@ -1,0 +1,12 @@
+{
+  "1": {
+    "mcq": "Question text here",
+    "options": {
+      "a": "Option A",
+      "b": "Option B",
+      "c": "Option C",
+      "d": "Option D"
+    },
+    "correct": "<one of: a | b | c | d>"
+  }
+}

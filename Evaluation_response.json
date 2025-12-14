@@ -1,0 +1,17 @@
+{
+  "complexity_analysis": "<brief analysis of quiz complexity (≤ 50 words)>",
+  "is_appropriate": "<true | false>",
+  "final_quiz": {
+    "1": {
+      "mcq": "<question text>",
+      "options": {
+        "a": "<option text>",
+        "b": "<option text>",
+        "c": "<option text>",
+        "d": "<option text>"
+      },
+      "correct": "<one of: a | b | c | d>"
+    }
+  }
+}
+
