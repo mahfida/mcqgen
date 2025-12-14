@@ -1,0 +1,6 @@
+Question_No,Question,Option_A,Option_B,Option_C,Option_D,Correct_Answer
+1,What is the foundation of machine learning?,Statistics and mathematical optimization methods,Data mining,Predictive analytics,Deep learning,a
+2,Who coined the term 'machine learning' in 1959?,Arthur Samuel,Donald Hebb,Walter Pitts,Warren McCulloch,b
+3,What is the focus of current Reinforcement Learning Algorithms?,"Decisions with respect to some previous, unknown time",Clustering,Dimensionality reduction,Association rule,c
+4,Which book provided a formal definition of the algorithms studied in the machine learning field?,Learning Machines by Nils Nilsson,The Organization of Behavior by Donald Hebb,Computing Machinery and Intelligence by Alan Turing,The Development of Machine Learning by Tom M. Mitchell,d
+5,What type of learning focuses on exploratory data analysis via unsupervised learning?,Data mining,Predictive analytics,Deep learning,Reinforcement learning,a
