@@ -1,0 +1,8 @@
+[2025-12-14 21:03:54,413] 69 src.mcqgenerator.logger- ERROR- StreamlitAPP - Streamlit app failed
+Traceback (most recent call last):
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\StreamlitAPP.py", line 37, in <module>
+    final_output, quiz_table_data, token_info = generate_mcqs(
+                                                ^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\src\mcqgenerator\MCQGenerator.py", line 65, in generate_mcqs
+    raise FileNotFoundError(f"Missing file: {evaluation_json_path}")
+FileNotFoundError: Missing file: C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\Evaluation_response.json

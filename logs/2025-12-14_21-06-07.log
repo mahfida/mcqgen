@@ -1,0 +1,73 @@
+[2025-12-14 21:06:47,688] 1025 httpx- INFO- _client - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[2025-12-14 21:06:47,715] 69 src.mcqgenerator.logger- ERROR- StreamlitAPP - Streamlit app failed
+Traceback (most recent call last):
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\StreamlitAPP.py", line 37, in <module>
+    final_output, quiz_table_data, token_info = generate_mcqs(
+                                                ^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\src\mcqgenerator\MCQGenerator.py", line 159, in generate_mcqs
+    final_output_text = combined_chain_text.invoke(inputs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\base.py", line 3141, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\passthrough.py", line 507, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\base.py", line 2058, in _call_with_config
+    context.run(
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\config.py", line 433, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\passthrough.py", line 493, in _invoke
+    **self.mapper.invoke(
+      ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\base.py", line 3867, in invoke
+    output = {
+             ^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\base.py", line 3868, in <dictcomp>
+    key: future.result()
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\base.py", line 3851, in _invoke_step
+    return context.run(
+           ^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\runnables\base.py", line 3143, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\language_models\chat_models.py", line 398, in invoke
+    self.generate_prompt(
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1117, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\language_models\chat_models.py", line 927, in generate
+    self._generate_with_cache(
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1221, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_openai\chat_models\base.py", line 1370, in _generate
+    raise e
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\langchain_openai\chat_models\base.py", line 1365, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\openai\_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\openai\_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRAdmin\Downloads\openai-tests\mcqgen\env\Lib\site-packages\openai\_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************RlsA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
