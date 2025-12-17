@@ -1,6 +1,6 @@
 {
   "complexity_analysis": "<brief analysis of quiz complexity (≤ 50 words)>",
-  "is_appropriate": "<true | false>",
+  "is_appropriate": true,
   "final_quiz": {
     "1": {
       "mcq": "<question text>",
@@ -14,4 +14,3 @@
     }
   }
 }
-
